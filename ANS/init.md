@@ -45,3 +45,41 @@ For a better UX, labels of length equal to one are disallowed and cannot be mint
 | 5             | 45,239,040    | 
 | 6             | 1,402,410,240 | 
 | 7             | 42,072,307,200|
+
+Label scarcity is determined by its length, the lower length it has, the more scarce it is. No renewal fees.
+
+## Possible Minting Models
+This section discusses the possible option to be adopted for the label minting process
+
+### Model 1: Free minting
+
+**Pros**
+Easier UX, no `$DLT` token is required to mint a label
+
+**Cons**
+- limited to 1 label minted per address
+- possible Sybil due to labels acquisation
+- minted is blockheight limited. unmited labels after a stage's end are sealed forever (6-7 length labels are in an open stage)
+
+### Model 2: minting using $DLT
+
+**Pros**
+- no minting limits per address, minting fee is related to the label length
+- makes `$DLT` more scarce through burning a percentage of the minting fees
+- auto-distribution of a bigger chunk of `$DLT` in-contract for stakers or label owners. Fees can be withdraw'd from the SWC
+
+**Cons**
+- a harder UX for new users: owning `$DLT`, depositing DLT tokens in the SWC, additional TXs.
+- the need of two tokens (DLT & AR) to make a minting transaction
+
+
+## Labels marketplace
+
+
+Labels may be a new asset with new standars not compatible with PSTs or atomic NFTs standards, thus, that requires building a marketplace dedicted for ANS labels.
+
+### characteristics
+- main currency: `$DLT`
+- create an economical experience and new opportunities
+- incentives for `$DLT` holders through marketplace earned fees
+
