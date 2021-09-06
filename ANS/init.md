@@ -30,32 +30,18 @@ The usage of the NFKC algorithm allows to reduce the visual security issues like
 - Punnycode and Script spoofing
 
 ## Available Labels
+ANS labels minting is based and limited using the arrangement without repitition of the conditional probability
+ 
+<img src="https://render.githubusercontent.com/render/math?math=%5CHuge%20A_n%5Ep%20%3D%20%7Bn!%7D%2F%7B(n-p)!%7D">
 
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mstyle displaystyle="true">
-    <mrow>
-      <msubsup>
-        <mi>A</mi>
-        <mi>n</mi>
-        <mi>p</mi>
-      </msubsup>
-    </mrow>
-    <mo>=</mo>
-    <mfrac>
-      <mrow>
-        <mi>n</mi>
-        <mo>!</mo>
-      </mrow>
-      <mrow>
-        <mrow>
-          <mo>(</mo>
-          <mi>n</mi>
-          <mo>&#x2212;</mo>
-          <mi>p</mi>
-          <mo>)</mo>
-        </mrow>
-        <mo>!</mo>
-      </mrow>
-    </mfrac>
-  </mstyle>
-</math>
+Knowing that `p` is that arbitrary label string entered by the user that may be alphanumerical, and `n` is the total number of allowed characters which is 36 (26 characters from alphabetical characters and 10 characters from the allowed integers).
+For a better UX, labels of length equal to one are disallowed and cannot be minted, hence, that total number of labels that can ever exist is more than 43B labels. Breakdown:
+
+| label length  | label supply  |
+| :-----------: |:-------------:| 
+| 2             | 1260          | 
+| 3             | 42,840        | 
+| 4             | 1,413,720     |
+| 5             | 45,239,040    | 
+| 6             | 1,402,410,240 | 
+| 7             | 42,072,307,200|
